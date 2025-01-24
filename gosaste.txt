@@ -1,0 +1,61 @@
+D<-file.choose()
+data<-read.table(D,header = T)
+data
+head(data)
+data[,1] =data[,1]+7
+data
+head(data)
+
+attach(data)
+
+
+AH<-as.factor(AH)
+Work<-as.factor(Work)
+RO<-as.factor(RO)
+age<-as.factor(age)
+Rs<-as.factor(Rs)
+
+
+T1<-table(Rs,AH)
+T1
+chisq.test(T1)
+
+T2<-table(Rs,Work)
+T2
+chisq.test(T2)
+
+
+T3<-table(Rs,RO)
+T3
+chisq.test(T3)
+
+T4<-table(Rs,age)
+T4
+chisq.test(T4)
+
+
+###########B#######
+M<-glm(Rs~AH+Work+RO+age+Nbr,family = binomial(link = "logit"))
+M
+summary(M)
+
+
+##################################################
+
+
+RO<-factor(RO,labels = c("Rent","Own"))
+RO
+RO2<-relevel(RO,ref = "Rent")
+RO2
+
+M2<-glm(Rs~AH+Work+RO2+age+Nbr,family = binomial(link = "logit"))
+
+M2
+summary(M2)
+
+coef(M2)
+exp(coef(M2))
+1/exp(coef(M2))
+confint(M2)
+
+exp(confint(M2))
