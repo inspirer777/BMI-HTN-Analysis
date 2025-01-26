@@ -12,6 +12,8 @@ This repository contains R and Python scripts for performing BMI analysis, hyper
   - Sample datasets used in the analysis.
 
 ## Prerequisites
+for R  
+```bash
 install.packages("readxl") # For reading Excel files
 install.packages("dplyr") # For data manipulation
 install.packages("ggplot2") # For data visualization
@@ -19,10 +21,21 @@ install.packages("car") # For advanced regression analysis
 install.packages("MASS") # For logistic regression and statistical methods
 install.packages("epiR") # For epidemiological analysis
 
+# load
+library(readxl)
+library(dplyr)
+library(ggplot2)
+library(car)
+library(MASS)
+library(epiR)
+
+
+```
+for python 
+```bash
 pip install pandas numpy scipy matplotlib seaborn
 
-
-
+```
 ## License
 
 This project is licensed under the [MIT License](LICENSE).  
