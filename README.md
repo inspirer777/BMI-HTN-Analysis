@@ -12,7 +12,14 @@ This repository contains R and Python scripts for performing BMI analysis, hyper
   - Sample datasets used in the analysis.
 
 ## Prerequisites
+install.packages("readxl") # For reading Excel files
+install.packages("dplyr") # For data manipulation
+install.packages("ggplot2") # For data visualization
+install.packages("car") # For advanced regression analysis
+install.packages("MASS") # For logistic regression and statistical methods
+install.packages("epiR") # For epidemiological analysis
 
+pip install pandas numpy scipy matplotlib seaborn
 
 
 
