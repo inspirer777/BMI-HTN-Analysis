@@ -1,9 +1,0 @@
-x<-factor(rep(c(1,2),c(10643,976),lables=c("Female","Male")))
-y<-
-  factor(rep(c(1,2,3,4,1,2,3,4),c(1935,3416,2676,2616,183,275,230,288),lables=c("Democrat","Independent","Repu
-blican")))
-table(x,y)
-chisq.test(x,y)
-chisq.test(x,y)$observed
-chisq.test(x,y)$expected
-chisq.test(x,y)$residuals
